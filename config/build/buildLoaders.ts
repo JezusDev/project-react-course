@@ -12,7 +12,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const styleLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            options.isDev ? MiniCssExtractPlugin.loader : 'style-loader',
+            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
                 loader: 'css-loader',
                 options: {
@@ -40,11 +40,23 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         ],
     }
 
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }
+
     return [
-        typescriptLoader,
-        styleLoader,
+        fileLoader,
         svgLoader,
-        fileLoader
+        babelLoader,
+        typescriptLoader,
+        styleLoader
     ]
 
 }
