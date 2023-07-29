@@ -8,7 +8,9 @@
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
     "build:test": "webpack --env mode=test",
-    "test": "jest"
+    "test": "jest",
+    "lint:ts": " eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix"
   },
   "keywords": [],
   "author": "",
