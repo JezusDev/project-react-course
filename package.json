@@ -10,7 +10,9 @@
     "build:test": "webpack --env mode=test",
     "test": "jest",
     "lint:ts": " eslint \"**/*.{ts,tsx}\"",
-    "lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix"
+    "lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:css": " npx stylelint \"**/*.scss\"",
+    "lint:css:fix": " npx stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",

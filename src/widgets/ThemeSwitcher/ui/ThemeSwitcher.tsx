@@ -3,8 +3,7 @@ import { Theme, useTheme } from 'providers/ThemeProvider';
 import React from 'react';
 import LightThemeIcon from 'shared/assets/icons/theme-light.svg';
 import DarkThemeIcon from 'shared/assets/icons/theme-dark.svg';
-import { AppButton } from 'shared/ui/AppButton/ui/AppButton';
-import cls from './ThemeSwitcher.module.scss';
+import { AppButton, ThemeAppButton } from 'shared/ui/AppButton/ui/AppButton';
 
 export interface ThemeSwitcherProps {
     className?: string
@@ -14,12 +13,11 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
     return (
         <AppButton
-            className={classNames(cls.ThemeSwitcher, {}, [className])}
+            theme={ThemeAppButton.CLEAR}
+            className={classNames('', {}, [className])}
             onClick={toggleTheme}
-            theme="clear"
         >
             {theme === Theme.LIGHT ? <DarkThemeIcon /> : <LightThemeIcon />}
         </AppButton>
-
     );
 };
