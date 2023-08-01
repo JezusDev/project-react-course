@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
-import { AppButton } from 'shared/ui/AppButton';
+import { AppButton } from 'shared/ui';
 import cls from './Sidebar.module.scss';
 
 export interface SidebarProps {
@@ -19,7 +19,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(
+                cls.Sidebar,
+                { [cls.collapsed]: collapsed },
+                [className],
+            )}
         >
             <AppButton onClick={onToggle}>{t('translation:Смена')}</AppButton>
             <div className={cls.switchers}>
