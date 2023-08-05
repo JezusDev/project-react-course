@@ -1,6 +1,6 @@
-import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { AppButton } from 'shared/ui/AppButton/AppButton';
+import { AppLink } from './AppLink/AppLink';
+import { Loader } from './Loader/Loader';
+import { AppButton } from './AppButton/AppButton';
 
 export {
     AppLink,
