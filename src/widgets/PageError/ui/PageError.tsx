@@ -3,7 +3,11 @@ import { AppButton } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import cls from './PageError.module.scss';
 
-export const PageError = () => {
+export interface PageErrorProps {
+    className?: string
+}
+
+export const PageError = ({ className }: PageErrorProps) => {
     const { t } = useTranslation();
     const onReload = () => {
         // eslint-disable-next-line no-restricted-globals
@@ -11,7 +15,7 @@ export const PageError = () => {
     };
 
     return (
-        <div className={classNames(cls.PageError)}>
+        <div className={classNames(cls.PageError, {}, [className])}>
             <h1>{t('Произошла непредвиденная ошибка')}</h1>
             <AppButton onClick={onReload} className={cls.AppButton}>
                 {t('Перезагрузить страницу')}

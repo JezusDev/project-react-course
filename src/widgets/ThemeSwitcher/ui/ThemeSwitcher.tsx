@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Theme, useTheme } from 'providers/ThemeProvider';
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import React from 'react';
 import LightThemeIcon from 'shared/assets/icons/theme-light.svg';
 import DarkThemeIcon from 'shared/assets/icons/theme-dark.svg';
