@@ -16,7 +16,8 @@
     "lint:css": " npx stylelint \"**/*.scss\"",
     "lint:css:fix": " npx stylelint \"**/*.scss\" --fix",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -с ./config/storybook"
+    "storybook:build": "build-storybook -с ./config/storybook",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static"
   },
   "keywords": [],
   "author": "",
@@ -99,14 +100,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.docker",
+        "target": "chrome.app",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.docker",
+        "target": "chrome.app",
         "preset": "iPhone 7"
       }
     }
