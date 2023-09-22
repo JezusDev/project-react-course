@@ -16,8 +16,6 @@
     width: 100%;
 }
 
-
-
 .collapseBtn {
     position: absolute;
     right: -32px;
@@ -30,7 +28,7 @@
     flex-direction: column;
     gap: 10px;
     margin-left: 20px;
-    transition: 0.2s ease
+    transition: 0.2s ease;
 }
 
 .item {
@@ -42,11 +40,11 @@
 .link {
     opacity: 1;
     white-space: nowrap;
-    transition: .2s ease
+    transition: 0.2s ease;
 }
 
 .icon {
-    fill: var(--inverted-primary-color)
+    fill: var(--inverted-primary-color);
 }
 
 .collapsed {
@@ -66,4 +64,3 @@
         width: 0;
     }
 }
-
