@@ -24,12 +24,14 @@ jobs:
 
       - name: linting
         run: npm run lint:ts
+        if: always()
 
       - name: linting css
         run: npm run lint:css
-
+        if: always()
       - name: unit test
         run: npm run test:unit
+        if: always()
 
 #      - name: storybook build
 #        run: npm run storybook:build
