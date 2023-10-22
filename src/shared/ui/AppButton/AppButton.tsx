@@ -37,8 +37,6 @@ export const AppButton: FC<AppButtonProps> = (props: AppButtonProps) => {
         [cls[size]]: true,
     };
 
-    console.log(this);
-
     return (
         <button
             type="button"
