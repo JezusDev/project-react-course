@@ -38,7 +38,7 @@ export default {
     modulePaths: [
         '<rootDir>src',
     ],
-    rootDir: '../..',
+    rootDir: '../../',
     testEnvironment: 'jsdom',
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
