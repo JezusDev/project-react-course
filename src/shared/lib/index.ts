@@ -1,5 +1,6 @@
-import { classNames } from './classNames/classNames';
+import { classNames, Mods } from './classNames/classNames';
 
 export {
     classNames,
+    Mods,
 };
