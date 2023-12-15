@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import path from 'path';
 import { BuildOptions } from './types/config';
 
 export function buildPlugin({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
@@ -10,6 +11,7 @@ export function buildPlugin({ paths, isDev }: BuildOptions): webpack.WebpackPlug
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             template: paths.html,
+            favicon: path.resolve(paths.assets, 'favicon.ico'),
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',

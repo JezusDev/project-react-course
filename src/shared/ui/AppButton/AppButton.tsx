@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib';
 import { FC, HTMLAttributes } from 'react';
 import cls from './AppButton.module.scss';
 
