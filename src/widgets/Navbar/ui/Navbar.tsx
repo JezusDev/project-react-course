@@ -19,7 +19,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         <div className={classNames(cls.Navbar, {}, [className])}>
             <AppButton
                 onClick={toggleModal}
-                theme={AppButtonTheme.BACKGROUND_INVERTED}
+                theme={AppButtonTheme.OUTLINE_INVERTED}
                 className={cls.links}
             >
                 {t('Войти')}

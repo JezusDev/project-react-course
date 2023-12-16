@@ -1,5 +1,5 @@
 import React, {
-    FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
+    FC, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames, Mods } from 'shared/lib';
 import { Portal } from 'shared/ui';
@@ -43,10 +43,12 @@ export const Modal: FC<ModalProps> = (props) => {
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', handleKeyDown);
+            document.body.classList.add('scroll-lock');
         }
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
             clearTimeout(timeRef.current);
+            document.body.classList.remove('scroll-lock');
         };
     }, [isOpen, handleKeyDown]);
 

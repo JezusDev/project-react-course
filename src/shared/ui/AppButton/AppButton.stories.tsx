@@ -25,6 +25,12 @@ Clear.args = {
     theme: AppButtonTheme.CLEAR,
 };
 
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Text',
+    theme: AppButtonTheme.CLEAR_INVERTED,
+};
+
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
@@ -58,6 +64,40 @@ OutlineDark.args = {
     theme: AppButtonTheme.OUTLINE,
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineInverted = Template.bind({});
+OutlineInverted.args = {
+    children: 'Text',
+    theme: AppButtonTheme.OUTLINE_INVERTED,
+};
+
+export const OutlineInvertedM = Template.bind({});
+OutlineInvertedM.args = {
+    children: 'Text',
+    size: AppButtonSize.M,
+    theme: AppButtonTheme.OUTLINE_INVERTED,
+};
+
+export const OutlineInvertedL = Template.bind({});
+OutlineInvertedL.args = {
+    children: 'Text',
+    size: AppButtonSize.L,
+    theme: AppButtonTheme.OUTLINE_INVERTED,
+};
+
+export const OutlineInvertedXL = Template.bind({});
+OutlineInvertedXL.args = {
+    children: 'Text',
+    size: AppButtonSize.XL,
+    theme: AppButtonTheme.OUTLINE_INVERTED,
+};
+
+export const OutlineInvertedDark = Template.bind({});
+OutlineInvertedDark.args = {
+    children: 'Text',
+    theme: AppButtonTheme.OUTLINE_INVERTED,
+};
+OutlineInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const BackgroundTheme = Template.bind({});
 BackgroundTheme.args = {
